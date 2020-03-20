@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+ <head>
+ <style>
+ body{
+ background:url('static/med.jpg');
+ background-size:cover;
+ margin:0;
+ }
+ input{
+ width:250px;
+ outline:none;
+ padding:7px 7px;
+ border:1px #aaa solid;
+ font-size:15px;
+ background:#fff;
+ display:block;
+ margin:10px;
+ }
+ #login{
+ background:#19b1ca;
+ color:#fff;
+ border:none;
+ }
+ input[type="submit"]:hover
+ {
+ cursor:pointer;
+ background:#39dc79;
+ color:#000;
+ }
+ input[type="submit"]
+ {
+  margin:10px;
+  width:150px;
+   padding:5px 5px;
+   margin-left:65px;
+ }
+ h1{
+ font-size:25px;
+ color:#fff;
+ font-style:italic
+ 
+ }
+ div{
+width:30;
+ height:575px;
+ background:rgba(0,0,0,.2);
+ box-shadow:15px 20px 45px #000;
+ position:absolute;
+ top:20px;
+ left:90px;
+ 
+ }
+ </style>
+ </head>
+ <div ="DoctorLogin">
+ <h1>Doctor's Sign Up</h1>
+ <p>User id</p>
+ <form action="http://localhost:5000/dr_signup" method = "POST">
+ <input type="text" name="d_id" placeholder="Enter User Name">
+ <p>Name</p>
+ <input type="text" name="d_place" placeholder="Enter Name">
+ <p>Specialization</p>
+ <input type="text" name="d_specialization" placeholder="Enter Specialization">
+ 
+ <p>Free time( E.g 18:45:00-19:55:00 )</p>
+ 
+ <input type="characters" name= "d_free" placeholder="Enter free time">
+ <p>Password</p>
+ <input type="password" name= "d_pass" placeholder="Enter password">
+ <input type="submit" name ="" value="Sign Up">
+ </form>
+
+</div> </body>
+ </html>

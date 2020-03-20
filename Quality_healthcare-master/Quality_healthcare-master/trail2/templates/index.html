@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <script src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    body {
+      background: #0098ff;
+      display: flex;
+      height: 100vh;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+      padding: 0 50px;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    video {
+      max-width: calc(50% - 100px);
+      margin: 0 50px;
+      box-sizing: border-box;
+      border-radius: 2px;
+      padding: 0;
+      background: white;
+    }
+    .copy {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      color: white;
+    }
+  </style>
+</head>
+<body onload="createparagraph()">
+  <div class="copy">Send your URL to a friend to start a video call</div>
+  <video id="localVideo" autoplay muted></video>
+  <video id="remoteVideo" autoplay></video>
+  <!---<p id="demo1"></p>--->
+  <script src="/static/script.js"></script>
+  <!---<script>
+  var id1='{{ x }} ';
+  document.getElementById("demo1").innerHTML = id1;
+  </script>--->
+<div id="divid"></div>
+<script>
+  function createparagraph()
+{
+var id1="{{ x1 }}";
+if(id1=="d"){
+var x = document.createElement("form"); 
+x.setAttribute('action',"http://localhost:5000/");
+x.setAttribute('method',"POST");
+var i=document.createElement("input"); 
+i.setAttribute('type',"submit");
+i.setAttribute('value',"Prescription");
+x.appendChild(i);
+document.getElementById("divid").appendChild(x);
+}
+}
+</script>
+</body>
+</html>

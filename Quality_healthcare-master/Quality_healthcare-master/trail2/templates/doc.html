@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+   <body>
+       <center><h1>Welcome Dr.{{ name }}!!...</h1></center>
+	   <style>
+	   body{
+ background:url('static/med.jpg');
+ background-size:cover;
+ margin:0;
+ }
+ 
+ h1 {
+ font-size:25px;
+ color:navy;
+ font-style:italic
+ padding-left:300px;
+ }
+ 
+#name td,#name th{
+border: 2px solid white;
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #2980b9;
+color: white;
+
+  }
+
+#name td:{background-color:white;
+font-color:black;
+font-size:15px;}
+
+
+#name th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: light blue;
+  color: white;
+}
+#name{
+ 
+width:50%;
+}
+
+ .button{
+	background-color:black;
+	color:#fff;
+	padding:15px 15px:
+	border:none;
+ }
+.button:hover{
+background:blue;
+color:#fff;
+}
+</style><center>
+       <table id="name" border = 2>
+          <tr>
+               <th> Name </th>
+               <th> Phone No. </th>
+               <th> Time_Sot </th>
+		<th> Video_Call</th>
+          </tr>
+         {% for b in result %}
+            <tr>
+               <td> {{ b[0] }} </td>
+               <td> {{ b[1] }} </td>
+               <td> {{ b[2] }} </td>
+		<form action ="http://localhost:5000/success" method = "POST">
+                       <td><input class="button" type="submit" name="d{{ b[3] }}" value="VideoCall"></td>
+                       </form>
+            </tr>
+         {% endfor %}
+      </table></center>
+       <form action = "http://localhost:5000/" method = "POST">
+       <center><p><input class="button" type = "submit" value = "LOGOUT" /></p></center>
+       </form>
+   </body>
+</html>

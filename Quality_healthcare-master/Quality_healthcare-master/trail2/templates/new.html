@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+ <head>
+ <style>
+ body{
+ background:url('/static/med.jpg');
+ background-size:cover;
+ margin:0;
+ }
+ input{
+ width:250px;
+ outline:none;
+ padding:10px 10px;
+ border:1px #aaa solid;
+ font-size:15px;
+ background:#fff;
+ display:block;
+ margin:20px;
+ }
+ input[type="submit"]:hover
+ {
+ 
+ cursor:pointer;
+ background:#39dc79;
+ color:#000;
+ }
+ 
+  input[type="submit"]
+ {
+  margin:10px;
+  width:150px;
+   padding:5px 5px;
+   margin-left:75px;
+ }
+ }
+ 
+ #login{
+ background:#19b1ca;
+ color:#fff;
+ border:none;
+ }
+ 
+ #DoctorLogin {
+width:30;
+ height:425px;
+ background:rgba(0,0,0,.2);
+ box-shadow:10px 20px 45px #000;
+ position:absolute;
+ top:80px;
+ left:200px;
+ 
+ }
+ 
+ 
+ #PatientLogin {
+width:30;
+ height:425px;
+ background:rgba(0,0,0,.2);
+ box-shadow:15px 20px 45px #000;
+ position:absolute;
+ top:80px;
+ left:600px;
+ 
+ }
+ 
+ 
+ h2{
+ font-size:25px;
+ color:#fff;
+ }
+ a:hover
+ {
+ cursor:pointer;
+ background:#39dc79;
+ color:#000;
+ 
+ }
+ h1{
+ font-size:25px;
+ color:#fff;
+ font-style:italic
+ 
+ }
+ 
+ 
+ </style>
+ <title>Login/Sign-Up form</title>
+  </head>
+ <body>
+ <div id="DoctorLogin">
+ <form action ="http://localhost:5000/login" method = "POST">
+     <h1>Doctor's Login</h1>
+     <h2>Login here</h2>
+     <p>User Name</p>
+         <input type="text" name="d_id" placeholder="Enter User Id">
+     <p>Password</p>
+         <input type="password" name= "e_pass" placeholder="Enter password">
+         <input type="submit" name ="sub_name" value="Login">
+ </form>
+ <form action ="http://localhost:5000/signup" method = "POST">
+     <input type="submit" name ="dr_signup" value="SignUp">
+ </form>
+ <a href="#">Forget Password</a></div>
+ 
+ 
+ 
+ <div id="PatientLogin">
+ <form action ="http://localhost:5000/login" method = "POST">
+     <h1>Patient's Login</h1>
+     <h2>Login here</h2>
+     <p>User Name</p>
+     <input type="text" name="p_id" placeholder="Enter User Name">
+     <p>Password</p>
+     <input type="password" name= "e_pass" placeholder="Enter password">
+     <input type="submit" name ="sub_name" value="Login">
+ </form>
+ <form action ="http://localhost:5000/signup" method = "POST">
+     <input type="submit"  name ="p_signup" value="Sign Up">
+ </form>
+ <a href="#">Forget Password</a>
+ </div> 
+ </body>
+</html>
